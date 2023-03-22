@@ -1,10 +1,10 @@
 
 import React, { Component,useRef  } from 'react';
 import ReactDOM from 'react-dom';
-import Appbar from 'muicss/lib/react/appbar';
+import { AppBar, Panel } from '@mui/material';
 import '../src/App.css';
 import PhotoSearch from "./Component1/PhotoSearch.jsx";
-import Panel from 'muicss/lib/react/panel';
+// import Panel from 'muicss/lib/react/panel';
 import TextOverPhoto from './Component1/TextOverPhoto';
 
 
@@ -35,14 +35,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Panel className="mui--z5 panel">
-          <Appbar className='topAppBar'><h1>Image Search</h1></Appbar>
-        </Panel>
+        {/* <Panel className="mui--z5 panel"> */}
+          <AppBar className='topAppBar'><h1>Image Search</h1></AppBar>
+        {/* </Panel> */}
         <div>
           <div>
-            <Panel>
+            {/* <Panel> */}
               <PhotoSearch></PhotoSearch>
-            </Panel>
+            {/* </Panel> */}
           </div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
           </div>
@@ -51,10 +51,10 @@ class App extends Component {
           
         </div>
        
-        <Panel className="mui--z5 panel4">
-          <Appbar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
-            Millichamp</a></Appbar>
-        </Panel>
+        {/* <Panel className="mui--z5 panel4"> */}
+          <AppBar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
+            Millichamp</a></AppBar>
+        {/* </Panel> */}
       </div>
     );
   }

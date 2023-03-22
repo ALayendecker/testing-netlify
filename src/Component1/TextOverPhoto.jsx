@@ -1,10 +1,8 @@
 
 import React, { useState, useRef } from 'react';
-import Textarea from 'muicss/lib/react/textarea';
-import Button from 'muicss/lib/react/button';
 import * as htmlToImage from 'html-to-image';
-import Dropdown from 'muicss/lib/react/dropdown';
-import DropdownItem from 'muicss/lib/react/dropdown-item';
+// import Dropdown from 'muicss/lib/react/dropdown';
+// import DropdownItem from 'muicss/lib/react/dropdown-item';
 import { copyImageToClipboard } from 'copy-image-clipboard';
 
 
@@ -90,11 +88,11 @@ function TextOverPhoto({ photo }) {
         
         
         
-        <Textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-        <Textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+        <textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+        <textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
         {/* </div>
       <div> */}
-        <Dropdown
+        {/* <Dropdown
        style={{backgroundColor:'#DA7422 ', color:'#FFFBDB'}}
           variant = 'raised'
           label="Text Color"
@@ -105,7 +103,7 @@ function TextOverPhoto({ photo }) {
           <DropdownItem value="Black">Black</DropdownItem>
           <DropdownItem value="Red">Red</DropdownItem>
           <DropdownItem value="Magenta">Magenta</DropdownItem>
-        </Dropdown>
+        </Dropdown> */}
       </div>
       <div>
 
@@ -167,8 +165,8 @@ function TextOverPhoto({ photo }) {
         </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
-        <Button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</Button>
+        <button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</button>
+        <button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</button>
         
       </div>
      

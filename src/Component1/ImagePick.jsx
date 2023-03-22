@@ -1,13 +1,10 @@
-import React, { useState, } from "react";
+import React, { useState } from "react";
 
 
 
-import Col from 'muicss/lib/react/col';
-import Row from 'muicss/lib/react/row';
-import Button from 'muicss/lib/react/button';
-import Appbar from 'muicss/lib/react/appbar';
-import Panel from 'muicss/lib/react/panel';
-import '../Component1/Css/ImagePick.css';
+import {AppBar} from '@mui/material';
+// import Panel from 'muicss/lib/react/panel';
+import './ImagePick.css';
 import TextOverPhoto from './TextOverPhoto';
 
 function ImagePick({ images }) {
@@ -20,9 +17,6 @@ function ImagePick({ images }) {
         }
     }
 
-
-
-
         const [selectedImage, setSelectedImage] = useState(null);
 
         const handleImageClick = (imageSrc) => {
@@ -33,15 +27,11 @@ function ImagePick({ images }) {
 
         };
 
-
-
         return (
             <div>
-
-                <Row>
-
+                {/* <Row> */}
                     {images.map((image) => (
-                        <Col md='2' className="smallImageColumn" >
+                        // <Col md='2' className="smallImageColumn" >
 
                             <img
                                 className='smallImages'
@@ -50,27 +40,17 @@ function ImagePick({ images }) {
                                 alt={image.photographer}
                                 onClick={() => handleImageClick(image.src.large)}
                             />
-                        </Col>
+                        // </Col>
                     ))}
-
-                </Row>
-                <Panel className="mui--z5 panel">
-                    <Appbar className='topAppBar' id='section1'><h1>Meme Generator</h1></Appbar >
-                </Panel>
-                <Panel className="mui--z5 panel3">
-
-                    <Col className="mui--align-middle">
-
-
-
+                {/* </Row> */}
+                {/* <Panel className="mui--z5 panel"> */}
+                    <AppBar className='topAppBar' id='section1'><h1>Meme Generator</h1></AppBar >
+                {/* </Panel> */}
+                {/* <Panel className="mui--z5 panel3"> */}
+                    {/* <Col className="mui--align-middle"> */}
                         <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />
-
-
-
-
-                    </Col>
-
-                </Panel>
+                    {/* </Col> */}
+                {/* </Panel> */}
             </div>
         );
     }
